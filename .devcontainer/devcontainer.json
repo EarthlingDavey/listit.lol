@@ -1,0 +1,18 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+  "name": "listit-lol-frontend",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "listit-lol-frontend",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+		"esbenp.prettier-vscode",
+		"GitHub.copilot",
+		"bradlc.vscode-tailwindcss"
+	]
+    }
+  },
+  "workspaceFolder": "/home/node/frontend"
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+}

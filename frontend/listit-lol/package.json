@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "remix build",
-    "dev": "remix dev --manual",
+    "dev": "SESSION_SECRET=a remix dev --manual",
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc",
     "storybook": "storybook dev --no-open -p 6006",

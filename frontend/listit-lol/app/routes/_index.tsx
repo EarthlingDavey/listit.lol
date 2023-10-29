@@ -8,6 +8,8 @@ import {
 } from '~/components/ui/accordion';
 import { Button } from '~/components/ui/button';
 
+import { Theme, useTheme } from '~/lib/theme-provider';
+
 export const meta: MetaFunction = () => {
   return [
     { title: 'New Remix App' },
@@ -16,12 +18,20 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const [, setTheme] = useTheme();
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) =>
+      prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
+    );
+  };
+
   return (
     <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.8' }}>
       <div className="container mx-auto py-4">
         <h1>Welcome to Remix</h1>
 
-        <Button>Click me</Button>
+        <Button onClick={toggleTheme}>Toggle theme</Button>
 
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">

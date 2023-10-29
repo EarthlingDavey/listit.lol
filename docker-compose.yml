@@ -5,7 +5,13 @@ services:
     image: node:21-bookworm-slim
     volumes:
       - ./frontend:/home/node/frontend
+      - /home/node/frontend/.pnpm-store
       - /home/node/frontend/tutorial/node_modules
+      - /home/node/frontend/listit-lol/.cache
+      - /home/node/frontend/listit-lol/.pnpm-store
+      - /home/node/frontend/listit-lol/build
+      - /home/node/frontend/listit-lol/node_modules
+      - /home/node/frontend/listit-lol/public/build
     entrypoint: ['/bin/bash']
     tty: true
     stdin_open: true

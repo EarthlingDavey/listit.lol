@@ -25,3 +25,7 @@ export const action: ActionFunction = async ({ request }) => {
 };
 
 export const loader: LoaderFunction = () => redirect('/', { status: 404 });
+
+export default function Component() {
+  return null;
+}

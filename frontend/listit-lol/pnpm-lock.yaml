@@ -41,6 +41,9 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  react-icons:
+    specifier: ^4.11.0
+    version: 4.11.0(react@18.2.0)
   tailwind-merge:
     specifier: ^1.14.0
     version: 1.14.0
@@ -94,9 +97,18 @@ devDependencies:
   eslint-plugin-storybook:
     specifier: ^0.6.15
     version: 0.6.15(eslint@8.52.0)(typescript@5.2.2)
+  prettier:
+    specifier: ^3.0.3
+    version: 3.0.3
+  prettier-plugin-tailwindcss:
+    specifier: ^0.5.6
+    version: 0.5.6(prettier@3.0.3)
   storybook:
     specifier: ^7.5.1
     version: 7.5.1
+  storybook-tailwind-dark-mode:
+    specifier: ^1.0.22
+    version: 1.0.22(@storybook/addons@7.5.1)(@storybook/api@7.5.1)(@storybook/components@7.5.1)(@storybook/core-events@7.5.1)(@storybook/theming@7.5.1)(react-dom@18.2.0)(react@18.2.0)
   tailwindcss:
     specifier: ^3.3.5
     version: 3.3.5
@@ -3515,6 +3527,36 @@ packages:
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
+    dev: true
+
+  /@storybook/addons@7.5.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-/AdQYqZ1aHHmMrJL68suo1IdyQzRQX7W1sQ3o40juqr/REIpiSZMMSuBcQ6wKXP1NxHMJXEDdb/iSN31Z6DiLg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@storybook/manager-api': 7.5.1(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/preview-api': 7.5.1
+      '@storybook/types': 7.5.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
+  /@storybook/api@7.5.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-z5HrwXnBdfr8q5CO3E9oL0H+joixyuQ2nod+UPqd5QYE/GzpyWHTzpW6CxSCDX2wL60KEsfc/7T0CE12Gx4XMA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@storybook/client-logger': 7.5.1
+      '@storybook/manager-api': 7.5.1(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: true
 
   /@storybook/blocks@7.5.1(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0):
@@ -9215,9 +9257,70 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
+  /prettier-plugin-tailwindcss@0.5.6(prettier@3.0.3):
+    resolution: {integrity: sha512-2Xgb+GQlkPAUCFi3sV+NOYcSI5XgduvDBL2Zt/hwJudeKXkyvRS65c38SB0yb9UB40+1rL83I6m0RtlOQ8eHdg==}
+    engines: {node: '>=14.21.3'}
+    peerDependencies:
+      '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-pug': '*'
+      '@shopify/prettier-plugin-liquid': '*'
+      '@shufo/prettier-plugin-blade': '*'
+      '@trivago/prettier-plugin-sort-imports': '*'
+      prettier: ^3.0
+      prettier-plugin-astro: '*'
+      prettier-plugin-css-order: '*'
+      prettier-plugin-import-sort: '*'
+      prettier-plugin-jsdoc: '*'
+      prettier-plugin-marko: '*'
+      prettier-plugin-organize-attributes: '*'
+      prettier-plugin-organize-imports: '*'
+      prettier-plugin-style-order: '*'
+      prettier-plugin-svelte: '*'
+      prettier-plugin-twig-melody: '*'
+    peerDependenciesMeta:
+      '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-pug':
+        optional: true
+      '@shopify/prettier-plugin-liquid':
+        optional: true
+      '@shufo/prettier-plugin-blade':
+        optional: true
+      '@trivago/prettier-plugin-sort-imports':
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-import-sort:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-style-order:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+      prettier-plugin-twig-melody:
+        optional: true
+    dependencies:
+      prettier: 3.0.3
+    dev: true
+
   /prettier@2.8.8:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /prettier@3.0.3:
+    resolution: {integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
@@ -9449,6 +9552,14 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
       react-is: 18.1.0
     dev: true
+
+  /react-icons@4.11.0(react@18.2.0):
+    resolution: {integrity: sha512-V+4khzYcE5EBk/BvcuYRq6V/osf11ODUM2J8hg2FDSswRrGvqiYUYPRy4OdrWaQOBj4NcpJfmHZLNaD+VH0TyA==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react-inspector@6.0.2(react@18.2.0):
     resolution: {integrity: sha512-x+b7LxhmHXjHoU/VrFAzw5iutsILRoYyDq97EDYdFpPLcvqtEzk4ZSZSQjnFPbr5T57tLXnHcqFYoN1pI6u8uQ==}
@@ -10089,6 +10200,31 @@ packages:
 
   /store2@2.14.2:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
+    dev: true
+
+  /storybook-tailwind-dark-mode@1.0.22(@storybook/addons@7.5.1)(@storybook/api@7.5.1)(@storybook/components@7.5.1)(@storybook/core-events@7.5.1)(@storybook/theming@7.5.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-I0HSVCuvo3OkaGDnCjLM7V1OYmQccrUCAGZ5ZaJfl9s3e93WA6DKFpQRbuoSidci+PTy+KvgrINgE08rA16bWA==}
+    peerDependencies:
+      '@storybook/addons': ^7.0.0
+      '@storybook/api': ^7.0.0
+      '@storybook/components': ^7.0.0
+      '@storybook/core-events': ^7.0.0
+      '@storybook/theming': ^7.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@storybook/addons': 7.5.1(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/api': 7.5.1(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/components': 7.5.1(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/core-events': 7.5.1
+      '@storybook/theming': 7.5.1(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: true
 
   /storybook@7.5.1:

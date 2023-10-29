@@ -6,10 +6,10 @@
   "customizations": {
     "vscode": {
       "extensions": [
-		"esbenp.prettier-vscode",
-		"GitHub.copilot",
-		"bradlc.vscode-tailwindcss"
-	]
+        "esbenp.prettier-vscode",
+        "GitHub.copilot",
+        "bradlc.vscode-tailwindcss"
+      ]
     }
   },
   "workspaceFolder": "/home/node/frontend"

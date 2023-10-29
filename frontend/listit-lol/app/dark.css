@@ -1,5 +1,4 @@
 html.dark {
-  --text-colour: white;
-  --background-colour: black;
+  /* Colors should be in hsl */
+  /* --background: 280, 100%, 50%, 1; */
 }
-

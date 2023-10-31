@@ -1,10 +1,11 @@
-import { FaFire } from 'react-icons/fa/index.js';
+import { Smiley, Heart, Horse } from '@phosphor-icons/react';
 
 export function SideBar() {
   return (
     <div className="fixed left-0 top-0 flex h-screen w-16 flex-col bg-white text-white shadow-lg dark:bg-gray-700">
-      <SideBarIcon icon={<FaFire size="28" />} />
-      <SideBarIcon icon={<FaFire size="28" />} />
+      <SideBarIcon icon={<Smiley size="28" />} />
+      <SideBarIcon icon={<Heart size="28" />} />
+      <SideBarIcon icon={<Horse size="28" />} />
     </div>
   );
 }

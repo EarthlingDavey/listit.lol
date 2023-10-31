@@ -1,20 +1,24 @@
 {
   "name": "listit-lol",
-  "private": true,
+  "version": "0.0.1",
+  "readme": "https://github.com/EarthlingDavey/listit.lol",
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "analyze:client": "esbuild-visualizer --metadata ./build/metafile.js.json --filename stats/client.html",
+    "analyze:server": "esbuild-visualizer --metadata ./build/metafile.server.json --filename stats/server.html",
     "build": "remix build",
-    "dev": "SESSION_SECRET=a remix dev --manual",
+    "chromatic": "npx chromatic",
+    "dev": "SESSION_SECRET=dev remix dev --manual",
     "start": "remix-serve ./build/index.js",
-    "typecheck": "tsc",
     "storybook": "storybook dev --no-open -p 6006",
-    "build-storybook": "storybook build",
-    "chromatic": "npx chromatic"
+    "storybook:build": "storybook build",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "@phosphor-icons/react": "^2.0.13",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@remix-run/css-bundle": "^2.1.0",
@@ -24,10 +28,8 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "isbot": "^3.6.8",
-    "lucide-react": "^0.290.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7"
   },
@@ -46,6 +48,7 @@
     "@types/react-dom": "^18.2.7",
     "autoprefixer": "^10.4.16",
     "chromatic": "^7.5.4",
+    "esbuild-visualizer": "^0.4.1",
     "eslint": "^8.38.0",
     "eslint-plugin-storybook": "^0.6.15",
     "prettier": "^3.0.3",
@@ -59,7 +62,5 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "version": "",
-  "readme": "ERROR: No README data found!",
   "_id": "listit-lol@"
 }

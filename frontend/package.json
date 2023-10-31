@@ -9,9 +9,12 @@
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc",
     "storybook": "storybook dev --no-open -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@remix-run/css-bundle": "^2.1.0",
@@ -42,6 +45,7 @@
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "autoprefixer": "^10.4.16",
+    "chromatic": "^7.5.4",
     "eslint": "^8.38.0",
     "eslint-plugin-storybook": "^0.6.15",
     "prettier": "^3.0.3",
@@ -54,5 +58,8 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "version": "",
+  "readme": "ERROR: No README data found!",
+  "_id": "listit-lol@"
 }

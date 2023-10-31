@@ -22,6 +22,8 @@ import styles from './tailwind.css';
 import mainStyles from './styles.css';
 import darkStyles from './dark.css';
 
+import Header from '~/components/Header/Header';
+
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: styles },
   {
@@ -64,6 +66,7 @@ function App() {
         <Links />
       </head>
       <body>
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

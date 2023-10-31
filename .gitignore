@@ -3,3 +3,4 @@ app/.pnpm-store
 app/node_modules
 frontend/.pnpm-store
 app/public/build
+.pnpm-store

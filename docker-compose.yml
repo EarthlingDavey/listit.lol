@@ -2,16 +2,16 @@ version: '3.7'
 
 services:
   listit-lol-frontend:
-    image: node:21-bookworm-slim
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
     volumes:
-      - ./frontend:/home/node/frontend
-      - /home/node/frontend/.pnpm-store
-      - /home/node/frontend/tutorial/node_modules
-      - /home/node/frontend/listit-lol/.cache
-      - /home/node/frontend/listit-lol/.pnpm-store
-      - /home/node/frontend/listit-lol/build
-      - /home/node/frontend/listit-lol/node_modules
-      - /home/node/frontend/listit-lol/public/build
+      - .:/home/node/listit-lol
+      - /home/node/listit-lol/frontend/.pnpm-store
+      - /home/node/listit-lol/frontend/.cache
+      - /home/node/listit-lol/frontend/build
+      - /home/node/listit-lol/frontend/node_modules
+      - /home/node/listit-lol/frontend/public/build
     entrypoint: ['/bin/bash']
     tty: true
     stdin_open: true

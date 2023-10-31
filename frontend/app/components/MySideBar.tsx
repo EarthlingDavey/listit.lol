@@ -7,7 +7,6 @@ export function SideBar() {
       <SideBarIcon icon={<FaFire size="28" />} />
       <SideBarIcon icon={<FaFire size="28" />} />
       <SideBarIcon icon={<FaFire size="28" />} />
-      <SideBarIcon icon={<FaFire size="28" />} />
     </div>
   );
 }

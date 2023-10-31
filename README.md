@@ -11,12 +11,12 @@ This project has been set up to run inside a dev container with VSCode. You can 
 
 ## NodeJS Packages
 
-[x] Remix - React with server side rendering  
-[x] Tailwind - CSS
-[x] shadcn/ui - Tailwind component library using radix-ui
-[x] Storybook - GUI for doc & component review
-[x] Chromatic - Visual testing & team review
-[ ] Jest - Testing
+- [x] Remix - React with server side rendering
+- [x] Tailwind - CSS
+- [x] shadcn/ui - Tailwind component library using radix-ui
+- [x] Storybook - GUI for doc & component review
+- [x] Chromatic - Visual testing & team review
+- [ ] Jest - Testing
 
 ## Bundle analysis
 
@@ -27,6 +27,6 @@ This project has been set up to run inside a dev container with VSCode. You can 
 
 ## Deployment
 
-[x] Github Pages - Storybook [https://earthlingdavey.github.io/listit.lol](https://earthlingdavey.github.io/listit.lol)
-[x] Chromatic - Storybook working but trigger is manual
-[ ] Service TBC - Remix App
+- [x] Github Pages - Storybook [https://earthlingdavey.github.io/listit.lol](https://earthlingdavey.github.io/listit.lol)
+- [x] Chromatic - Storybook working but trigger is manual [docs](https://www.chromatic.com/docs/github-actions/)
+- [ ] Service TBC - Remix App
